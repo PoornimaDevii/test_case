@@ -9,14 +9,16 @@ Collect your trained model and load it into a storage resource running on the cl
 ## **Step 2**:
 
 Deploy KFserving model server on cluster. This can be done in 2 ways:
-      * Deploy out-of-box available model servers such as TFserving, TorchServe as a CRD (Custom resource definition). Refer https://github.com/kserve/kserve/blob/master/docs/samples/README.md
-      * Create custom model-server, create a Docker image for it and deploy it on cluster. Sample of custom model-server - https://github.com/CiscoAI/cisco-kubeflow-starter-pack/tree/master/apps/computer-vision/object-detection/onprem/pipeline/components/v2/model-server
+
+- Deploy out-of-box available model servers such as TFserving, TorchServe as a CRD (Custom resource definition). Refer https://github.com/kserve/kserve/blob/master/docs/samples/README.md.
+
+- Create custom model-server, create a Docker image for it and deploy it on cluster. Sample of custom model-server - https://github.com/CiscoAI/cisco-kubeflow-starter-pack/tree/master/apps/computer-vision/object-detection/onprem/pipeline/components/v2/model-server and in a code snippet in the screenshot below:
 
 ![KFserving](pictures/model_server.png)
 
 ## **Step 3**:
 
-Create a Endpoint Specification embedding the custom model server's image and create an Inference service specification using YAML config or Kfserving SDK.
+Create an Endpoint Specification embedding the custom model server's image and create an Inference service specification using YAML config or Kfserving SDK.
 
 ![KFserving](pictures/deployer.png)
 
